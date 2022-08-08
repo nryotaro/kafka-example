@@ -1,0 +1,1 @@
+servers.propertiesのadvertized listenersに自分のプライベートIPをかく

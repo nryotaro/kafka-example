@@ -10,7 +10,11 @@ services:
     volumes:
       - $PWD/kafka_2.13-3.2.1/config/server.properties:/home/kafka/kafka/config/server.properties
     ports:
-      - "127.0.0.1:9092:9092"
+      - "9092:9092"
+    depends_on:
+      - zookeeper
+    #environment:
+      #KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
   zookeeper:
     image: kafka-example/zookeeper
     build:
